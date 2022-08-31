@@ -81,9 +81,10 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
   },
   subText: {
+    // fontWeight: 'bold',
     fontFamily: 'Poppins-Bold',
     fontSize: 30,
-    fontWeight: '700',
+    fontWeight: '800',
     lineHeight: 45,
     color: '#FFFFFF',
   },

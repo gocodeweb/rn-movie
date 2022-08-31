@@ -7,7 +7,7 @@
  */
 
 import React from 'react';
-import {ScrollView, StatusBar, useColorScheme, View} from 'react-native';
+import {ScrollView, StatusBar, useColorScheme} from 'react-native';
 import MoviesDisplay from '../MoviesDisplay/MoviesDisplay';
 import Header from '../Header/Header';
 

@@ -1,7 +1,7 @@
 import React from 'react';
 import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
 // import {NavigationContainer} from '@react-navigation/native';
-import {Text, View} from 'react-native';
+import {Text, TouchableOpacity, View} from 'react-native';
 import Icon from 'react-native-vector-icons/Ionicons';
 // import HomeScreen from '../Home/Home';
 
@@ -30,11 +30,9 @@ const Tab = createBottomTabNavigator();
 
 export default function MyTabs({navigation}) {
   return (
-    // <NavigationContainer>
     <Tab.Navigator
-      //   tabBar={props => <MyTabBar {...props} />}
-      //   tabBarButton={props => <TouchableOpacity {...props} />}
       screenOptions={{
+        tabBarItemStyle: {height: 45},
         tabBarShowLabel: false,
         tabBarStyle: {
           position: 'absolute',
@@ -45,18 +43,10 @@ export default function MyTabs({navigation}) {
           marginLeft: '5%',
           marginRight: '5%',
           borderRadius: 50,
+          flexDirection: 'row',
+          justifyContent: 'center',
         },
       }}>
-      {/* <Tab.Screen
-        name="Home"
-        component={HomeScreen}
-        options={{
-          tabBarLabel: 'Home',
-          tabBarIcon: () => (
-            <Icon name="home-sharp" size={27} color="#CDEEFB" />
-          ),
-        }}
-      /> */}
       <Tab.Screen
         name="Bookmark"
         component={BookmarkScreen}
@@ -88,6 +78,5 @@ export default function MyTabs({navigation}) {
         }}
       />
     </Tab.Navigator>
-    // </NavigationContainer>
   );
 }

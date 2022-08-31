@@ -5,16 +5,14 @@ import {
   ImageBackground,
   Image,
   Text,
-  Button,
   TouchableOpacity,
 } from 'react-native';
 import Icon from 'react-native-vector-icons/Ionicons';
-import background from '../../img/movie1.png';
 import videoTitle from '../../img/videoTitle.png';
 import userIcon from '../../img/userIcon.png';
 import {Rating} from 'react-native-ratings';
 import star from '../../img/star.png';
-import {movies} from '../../data';
+import {movies, actors} from '../../data';
 
 export default function MoviesDetails({navigation, route}) {
   const {id} = route.params;
@@ -23,7 +21,7 @@ export default function MoviesDetails({navigation, route}) {
     <View style={styles.container}>
       <View style={styles.poster}>
         <ImageBackground
-          source={{uri: movies[id].source}}
+          source={{uri: movies[id].bigImageSource}}
           resizeMode="cover"
           style={styles.image}>
           <View style={styles.header}>
@@ -45,12 +43,13 @@ export default function MoviesDetails({navigation, route}) {
               ratingColor="#3498db"
               readonly={true}
               ratingCount={5}
-              startingValue={5}
+              startingValue={movies[id].rating}
               imageSize={25}
               showRating={false}
-              style={{paddingVertical: 10}}
+              // style={{paddingVertical: 10}}
             />
 
+            <Text style={styles.ratingNum}>{movies[id].rating}</Text>
             <Text style={styles.slash}>/</Text>
             <Text style={styles.duration}>{movies[id].duration}</Text>
           </View>
@@ -75,11 +74,26 @@ export default function MoviesDetails({navigation, route}) {
             <Icon name="md-man-outline" size={15} color="#05AAE4" />
           </View>
           <View style={styles.actorView}>
-            {movies[id].actors.map(actor => (
-              <Text style={styles.actor} key={actor}>
-                {actor}
-              </Text>
-            ))}
+            {movies[id].actorsId.map(actorId =>
+              actors
+                .filter(actor => actor.id === actorId)
+                .map(actor => (
+                  <View style={styles.actorView2} key={actor}>
+                    <Image
+                      source={{uri: actor.image}}
+                      resizeMode="cover"
+                      style={{
+                        width: 60,
+                        height: 60,
+                        borderRadius: 10,
+                        marginEnd: 10,
+                        marginBottom: 4,
+                      }}
+                    />
+                    <Text style={styles.actor}>{actor.name}</Text>
+                  </View>
+                )),
+            )}
           </View>
         </View>
       </View>
@@ -88,7 +102,7 @@ export default function MoviesDetails({navigation, route}) {
 }
 const styles = StyleSheet.create({
   container: {
-    height: '60%',
+    height: '55%',
     width: '100%',
     borderRadius: 50,
   },
@@ -103,8 +117,9 @@ const styles = StyleSheet.create({
   title: {
     color: '#FFFFFF',
     fontSize: 28,
-    fontFamily: 'Poppins',
-    fontWeight: '600',
+    fontFamily: 'Poppins-Regular',
+    fontWeight: '700',
+    textTransform: 'uppercase',
   },
   poster: {
     width: '100%',
@@ -116,7 +131,7 @@ const styles = StyleSheet.create({
   },
   backgroundDetails: {
     marginTop: -100,
-    height: '100%',
+    height: '130%',
     width: '100%',
     borderRadius: 50,
     backgroundColor: '#162B3D',
@@ -131,14 +146,22 @@ const styles = StyleSheet.create({
     alignItems: 'flex-start',
   },
   rating: {
+    marginTop: 15,
     flexDirection: 'row',
     justifyContent: 'flex-start',
     alignItems: 'center',
   },
+  ratingNum: {
+    color: '#00AAE4',
+    fontSize: 15,
+    fontFamily: 'Poppins-Regular',
+    fontWeight: '500',
+    marginStart: 8,
+  },
   slash: {
     color: '#FFFFFF20',
     fontSize: 15,
-    fontFamily: 'Poppins',
+    fontFamily: 'Poppins-Regular',
     fontWeight: '600',
     marginLeft: 8,
     marginRight: 8,
@@ -146,15 +169,13 @@ const styles = StyleSheet.create({
   duration: {
     color: '#00AAE4',
     fontSize: 15,
-    fontFamily: 'Poppins',
+    fontFamily: 'Poppins-Regular',
     fontWeight: '400',
   },
   buttonsView: {
     flexDirection: 'row',
-    width: '100%',
-    justifyContent: 'space-between',
     alignItems: 'center',
-    marginTop: 12,
+    marginTop: 18,
     marginBottom: 12,
   },
   playButton: {
@@ -165,74 +186,89 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     justifyContent: 'center',
     alignItems: 'center',
+    marginEnd: 4,
   },
   play: {
     color: '#FFFFFF',
     fontSize: 20,
-    fontFamily: 'Poppins',
-    fontWeight: '700',
+    fontFamily: 'Poppins-Regular',
+    fontWeight: '800',
     marginStart: 8,
   },
   chaptersButton: {
-    backgroundColor: '#00000030',
+    backgroundColor: '#1A3245',
     width: 150,
     height: 35,
     borderRadius: 50,
     flexDirection: 'row',
     justifyContent: 'center',
     alignItems: 'center',
+    marginEnd: 4,
   },
   chapters: {
     color: '#FFFFFF',
     fontSize: 18,
-    fontFamily: 'Poppins',
-    fontWeight: '700',
+    fontFamily: 'Poppins-Regular',
+    fontWeight: '800',
     marginStart: 8,
   },
   info: {
     color: '#FFFFFF',
     fontSize: 18,
-    fontFamily: 'Poppins',
+    fontFamily: 'Poppins-Regular',
     fontWeight: '700',
   },
   infoButton: {
-    backgroundColor: '#00000035',
-    width: 35,
-    height: 35,
+    backgroundColor: '#1A3245',
+    width: 30,
+    height: 30,
     borderRadius: 10,
     flexDirection: 'row',
     justifyContent: 'center',
     alignItems: 'center',
   },
   description: {
+    marginTop: 15,
     color: '#FFFFFF50',
     fontSize: 15,
-    fontFamily: 'Poppins',
+    fontFamily: 'Poppins-Regular',
     fontWeight: '300',
   },
   actorsView: {
     flexDirection: 'row',
     justifyContent: 'flex-start',
     alignItems: 'center',
-    marginTop: 12,
+    marginTop: 15,
   },
   actors: {
     color: '#FFFFFF',
     fontSize: 20,
-    fontFamily: 'Poppins',
-    fontWeight: '700',
+    fontFamily: 'Poppins-Regular',
+    fontWeight: '800',
     marginEnd: 8,
+    marginBottom: 10,
   },
   actorView: {
     flexDirection: 'row',
     justifyContent: 'flex-start',
     alignItems: 'center',
   },
+  actorView2: {
+    flexDirection: 'column',
+    justifyContent: 'center',
+    alignItems: 'center',
+  },
   actor: {
     color: '#FFFFFF',
-    fontSize: 20,
-    fontFamily: 'Poppins',
+    fontSize: 7,
+    fontFamily: 'Poppins-Regular',
     fontWeight: '600',
     marginEnd: 10,
+    width: '50%',
+    textAlign: 'center',
+  },
+  img: {
+    height: 100,
+    borderRadius: 10,
   },
 });

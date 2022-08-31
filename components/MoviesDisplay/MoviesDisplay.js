@@ -20,7 +20,7 @@ export default function MoviesDisplay({navigation}) {
               .map(movie => (
                 <Movie
                   key={movie.id}
-                  source={movie.source}
+                  source={movie.smallImageSource}
                   rating={movie.rating}
                   producer={movie.producer}
                   id={movie.id}
@@ -39,8 +39,8 @@ export default function MoviesDisplay({navigation}) {
               .filter(movie => movie.forYou === true)
               .map(movie => (
                 <Movie
-                  key={movie.source}
-                  source={movie.source}
+                  key={movie.id}
+                  source={movie.smallImageSource}
                   rating={movie.rating}
                   producer={movie.producer}
                   id={movie.id}
@@ -76,7 +76,7 @@ const styles = StyleSheet.create({
     width: '100%',
   },
   scroll: {
-    width: 450,
+    width: '100%',
   },
   movies: {
     display: 'flex',
@@ -86,7 +86,7 @@ const styles = StyleSheet.create({
   subText: {
     fontFamily: 'Poppins-Bold',
     fontSize: 20,
-    fontWeight: '700',
+    fontWeight: '800',
     lineHeight: 45,
     color: '#FFFFFF',
     marginRight: 7,
