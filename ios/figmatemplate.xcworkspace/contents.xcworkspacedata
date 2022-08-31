@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Workspace
+   version = "1.0">
+   <Group
+      location = "group:../../../../Desktop/Fonts"
+      name = "Fonts">
+      <FileRef
+         location = "group:Ionicons.ttf">
+      </FileRef>
+      <FileRef
+         location = "group:Poppins-Bold.ttf">
+      </FileRef>
+   </Group>
+   <FileRef
+      location = "group:figmatemplate.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:Pods/Pods.xcodeproj">
+   </FileRef>
+</Workspace>
