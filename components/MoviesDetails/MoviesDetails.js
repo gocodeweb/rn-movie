@@ -1,20 +1,18 @@
 import React from 'react';
 import {
-  View,
-  StyleSheet,
-  ImageBackground,
   Image,
+  ImageBackground,
+  StyleSheet,
   Text,
   TouchableOpacity,
+  View,
 } from 'react-native';
-import Icon from 'react-native-vector-icons/Ionicons';
-import videoTitle from '../../img/videoTitle.png';
-import userIcon from '../../img/userIcon.png';
 import {Rating} from 'react-native-ratings';
+import Icon from 'react-native-vector-icons/Ionicons';
+import {actors, movies} from '../../data';
 import star from '../../img/star.png';
-import {movies, actors} from '../../data';
-
-Icon.loadFont();
+import userIcon from '../../img/userIcon.png';
+import videoTitle from '../../img/videoTitle.png';
 
 export default function MoviesDetails({navigation, route}) {
   const {id} = route.params;

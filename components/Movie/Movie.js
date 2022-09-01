@@ -1,7 +1,7 @@
 import React from 'react';
-import {View, StyleSheet, Image, Text, TouchableOpacity} from 'react-native';
-import star from '../../img/star.png';
+import {Image, StyleSheet, Text, TouchableOpacity, View} from 'react-native';
 import {Rating} from 'react-native-ratings';
+import star from '../../img/star.png';
 
 export default function Movie({
   navigation,
@@ -15,7 +15,7 @@ export default function Movie({
     <View style={styles.container}>
       <TouchableOpacity
         title="Details"
-        onPress={() => navigation.push('Details', {id, data})}>
+        onPress={() => navigation.push('Details', {id})}>
         <Image source={{uri: source}} resizeMode="cover" style={styles.image} />
       </TouchableOpacity>
       <View style={styles.subText}>

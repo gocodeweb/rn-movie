@@ -8,9 +8,8 @@
 
 import React from 'react';
 import {ScrollView, StatusBar, useColorScheme} from 'react-native';
-import MoviesDisplay from '../MoviesDisplay/MoviesDisplay';
 import Header from '../Header/Header';
-
+import MoviesDisplay from '../MoviesDisplay/MoviesDisplay';
 import MyTabs from '../Tabs/Tabs';
 
 const HomeScreen = ({navigation}) => {

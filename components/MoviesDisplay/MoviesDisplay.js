@@ -1,10 +1,9 @@
 import React from 'react';
-import {Text, View, StyleSheet, ScrollView} from 'react-native';
-
+import {ScrollView, StyleSheet, Text, View} from 'react-native';
 import Icon from 'react-native-vector-icons/Ionicons';
-import Movie from '../Movie/Movie';
 import {movies} from '../../data';
-Icon.loadFont();
+import Movie from '../Movie/Movie';
+
 export default function MoviesDisplay({navigation}) {
   return (
     <View style={styles.container}>

@@ -1,17 +1,16 @@
 import React from 'react';
 import {
-  Text,
-  View,
-  StyleSheet,
-  TextInput,
   Image,
   ImageBackground,
+  StyleSheet,
+  Text,
+  TextInput,
+  View,
 } from 'react-native';
-
 import Icon from 'react-native-vector-icons/Ionicons';
 import background from '../../img/background.png';
-import videoTitle from '../../img/videoTitle.png';
 import userIcon from '../../img/userIcon.png';
+import videoTitle from '../../img/videoTitle.png';
 
 Icon.loadFont();
 
