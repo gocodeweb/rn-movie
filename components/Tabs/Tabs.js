@@ -1,6 +1,6 @@
 import React from 'react';
 import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
-import {Text, View} from 'react-native';
+import {Text} from 'react-native';
 import Icon from 'react-native-vector-icons/Ionicons';
 
 function BookmarkScreen() {

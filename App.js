@@ -17,7 +17,7 @@ const Stack = createNativeStackNavigator();
 
 let HomeScreen = require('./components/Home/Home').default;
 
-const App: () => Node = () => {
+const App = () => {
   return (
     <NavigationContainer>
       <Stack.Navigator screenOptions={{headerShown: false}}>

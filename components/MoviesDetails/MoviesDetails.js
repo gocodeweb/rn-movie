@@ -224,7 +224,7 @@ const styles = StyleSheet.create({
     alignItems: 'center',
   },
   description: {
-    marginTop: 15,
+    marginTop: 10,
     color: '#FFFFFF50',
     fontSize: 15,
     fontFamily: 'Poppins-Regular',
@@ -234,7 +234,7 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     justifyContent: 'flex-start',
     alignItems: 'center',
-    marginTop: 15,
+    marginTop: 10,
   },
   actors: {
     color: '#FFFFFF',
