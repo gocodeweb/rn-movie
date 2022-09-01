@@ -14,6 +14,8 @@ import {Rating} from 'react-native-ratings';
 import star from '../../img/star.png';
 import {movies, actors} from '../../data';
 
+Icon.loadFont();
+
 export default function MoviesDetails({navigation, route}) {
   const {id} = route.params;
 
@@ -23,7 +25,7 @@ export default function MoviesDetails({navigation, route}) {
         <ImageBackground
           source={{uri: movies[id].bigImageSource}}
           resizeMode="cover"
-          style={styles.image}>
+          style={styles.bgImage}>
           <View style={styles.header}>
             <TouchableOpacity onPress={() => navigation.goBack()}>
               <Icon name="arrow-back" size={30} color="#CDEEFB" />
@@ -41,12 +43,12 @@ export default function MoviesDetails({navigation, route}) {
               type="custom"
               ratingImage={star}
               ratingColor="#3498db"
+              ratingBackgroundColor="#162B3D"
               readonly={true}
               ratingCount={5}
               startingValue={movies[id].rating}
               imageSize={25}
               showRating={false}
-              // style={{paddingVertical: 10}}
             />
 
             <Text style={styles.ratingNum}>{movies[id].rating}</Text>
@@ -63,7 +65,7 @@ export default function MoviesDetails({navigation, route}) {
               <Text style={styles.chapters}>Chapters</Text>
             </TouchableOpacity>
             <TouchableOpacity style={styles.infoButton}>
-              <Text style={styles.info}>!</Text>
+              <Text style={styles.info}>i</Text>
             </TouchableOpacity>
           </View>
           <View style={styles.descriptionView}>
@@ -81,14 +83,8 @@ export default function MoviesDetails({navigation, route}) {
                   <View style={styles.actorView2} key={actor}>
                     <Image
                       source={{uri: actor.image}}
+                      style={styles.image}
                       resizeMode="cover"
-                      style={{
-                        width: 60,
-                        height: 60,
-                        borderRadius: 10,
-                        marginEnd: 10,
-                        marginBottom: 4,
-                      }}
                     />
                     <Text style={styles.actor}>{actor.name}</Text>
                   </View>
@@ -125,7 +121,7 @@ const styles = StyleSheet.create({
     width: '100%',
     height: '100%',
   },
-  image: {
+  bgImage: {
     width: '100%',
     height: '100%',
   },
@@ -214,7 +210,7 @@ const styles = StyleSheet.create({
   },
   info: {
     color: '#FFFFFF',
-    fontSize: 18,
+    fontSize: 15,
     fontFamily: 'Poppins-Regular',
     fontWeight: '700',
   },
@@ -267,8 +263,11 @@ const styles = StyleSheet.create({
     width: '50%',
     textAlign: 'center',
   },
-  img: {
-    height: 100,
+  image: {
+    width: 60,
+    height: 60,
     borderRadius: 10,
+    marginEnd: 10,
+    marginBottom: 4,
   },
 });

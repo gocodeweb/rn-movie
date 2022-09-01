@@ -27,6 +27,7 @@ export default function Movie({
           type="custom"
           ratingImage={star}
           ratingColor="#3498db"
+          ratingBackgroundColor="#162B3D"
           readonly={true}
           ratingCount={5}
           startingValue={rating}

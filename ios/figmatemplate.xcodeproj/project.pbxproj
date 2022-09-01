@@ -8,14 +8,15 @@
 
 /* Begin PBXBuildFile section */
 		00E356F31AD99517003FC87E /* figmatemplateTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E356F21AD99517003FC87E /* figmatemplateTests.m */; };
+		07FC177E7B6F35577EF76358 /* libPods-figmatemplate.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4DBF11B62E3B3B8DF9DD9610 /* libPods-figmatemplate.a */; };
 		13B07FBC1A68108700A75B9A /* AppDelegate.mm in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB01A68108700A75B9A /* AppDelegate.mm */; };
-		13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
 		13B07FC11A68108700A75B9A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
-		69F663F1590E5B87E36EA020 /* libPods-figmatemplate-figmatemplateTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9E1A473552A66192FCA8594A /* libPods-figmatemplate-figmatemplateTests.a */; };
-		6E0514C17C6015914B63F1EA /* libPods-figmatemplate.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4DBF11B62E3B3B8DF9DD9610 /* libPods-figmatemplate.a */; };
-		81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */; };
-		F08065ED28BDF465006CDDE6 /* Ionicons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F08065EC28BDF45C006CDDE6 /* Ionicons.ttf */; };
-		F08065EF28BDF47B006CDDE6 /* Poppins-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F08065EE28BDF47B006CDDE6 /* Poppins-Bold.ttf */; };
+		697E1762542D060AA2AE4193 /* libPods-figmatemplate-figmatemplateTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9E1A473552A66192FCA8594A /* libPods-figmatemplate-figmatemplateTests.a */; };
+		F005959D28C0868F00ED6914 /* figmatemplateTests.xctest in Resources */ = {isa = PBXBuildFile; fileRef = 00E356EE1AD99517003FC87E /* figmatemplateTests.xctest */; };
+		F005959E28C0869200ED6914 /* figmatemplate.app in Resources */ = {isa = PBXBuildFile; fileRef = 13B07F961A680F5B00A75B9A /* figmatemplate.app */; platformFilter = ios; };
+		F04170E428C0B6B3009362E9 /* Poppins-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F0A7AE0928C0ACF800BAD0BE /* Poppins-Regular.ttf */; };
+		F04170E528C0B6B3009362E9 /* Ionicons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F0A7AE0728C0ACD600BAD0BE /* Ionicons.ttf */; };
+		F04170E728C0BA1C009362E9 /* Poppins-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F04170E628C0B9E8009362E9 /* Poppins-Bold.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,8 +47,9 @@
 		BDAD67708782AC0498F4E51E /* Pods-figmatemplate.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-figmatemplate.debug.xcconfig"; path = "Target Support Files/Pods-figmatemplate/Pods-figmatemplate.debug.xcconfig"; sourceTree = "<group>"; };
 		D4432D7CBD2077BC480BDA0D /* Pods-figmatemplate-figmatemplateTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-figmatemplate-figmatemplateTests.debug.xcconfig"; path = "Target Support Files/Pods-figmatemplate-figmatemplateTests/Pods-figmatemplate-figmatemplateTests.debug.xcconfig"; sourceTree = "<group>"; };
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
-		F08065EC28BDF45C006CDDE6 /* Ionicons.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Ionicons.ttf; sourceTree = "<group>"; };
-		F08065EE28BDF47B006CDDE6 /* Poppins-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-Bold.ttf"; sourceTree = "<group>"; };
+		F04170E628C0B9E8009362E9 /* Poppins-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-Bold.ttf"; sourceTree = "<group>"; };
+		F0A7AE0728C0ACD600BAD0BE /* Ionicons.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Ionicons.ttf; sourceTree = "<group>"; };
+		F0A7AE0928C0ACF800BAD0BE /* Poppins-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-Regular.ttf"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,7 +57,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				69F663F1590E5B87E36EA020 /* libPods-figmatemplate-figmatemplateTests.a in Frameworks */,
+				697E1762542D060AA2AE4193 /* libPods-figmatemplate-figmatemplateTests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -63,7 +65,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6E0514C17C6015914B63F1EA /* libPods-figmatemplate.a in Frameworks */,
+				07FC177E7B6F35577EF76358 /* libPods-figmatemplate.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -120,8 +122,7 @@
 		83CBB9F61A601CBA00E9B192 = {
 			isa = PBXGroup;
 			children = (
-				F08065EC28BDF45C006CDDE6 /* Ionicons.ttf */,
-				F08065EE28BDF47B006CDDE6 /* Poppins-Bold.ttf */,
+				F0A7AE0628C0AC6500BAD0BE /* Fonts */,
 				13B07FAE1A68108700A75B9A /* figmatemplate */,
 				832341AE1AAA6A7D00B99B32 /* Libraries */,
 				00E356EF1AD99517003FC87E /* figmatemplateTests */,
@@ -152,6 +153,16 @@
 				536F9CE21D1E08B0E8D04A8A /* Pods-figmatemplate-figmatemplateTests.release.xcconfig */,
 			);
 			path = Pods;
+			sourceTree = "<group>";
+		};
+		F0A7AE0628C0AC6500BAD0BE /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				F0A7AE0928C0ACF800BAD0BE /* Poppins-Regular.ttf */,
+				F04170E628C0B9E8009362E9 /* Poppins-Bold.ttf */,
+				F0A7AE0728C0ACD600BAD0BE /* Ionicons.ttf */,
+			);
+			name = Fonts;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -186,10 +197,10 @@
 				FD10A7F022414F080027D42C /* Start Packager */,
 				13B07F871A680F5B00A75B9A /* Sources */,
 				13B07F8C1A680F5B00A75B9A /* Frameworks */,
-				13B07F8E1A680F5B00A75B9A /* Resources */,
 				00DD1BFF1BD5951E006B06BC /* Bundle React Native code and images */,
 				3D3C5DD547C596FD3F559ED9 /* [CP] Embed Pods Frameworks */,
 				F0F14E31B8B995FB6CE09C2F /* [CP] Copy Pods Resources */,
+				F04170E328C0B6AC009362E9 /* Resources */,
 			);
 			buildRules = (
 			);
@@ -241,17 +252,18 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F005959E28C0869200ED6914 /* figmatemplate.app in Resources */,
+				F005959D28C0868F00ED6914 /* figmatemplateTests.xctest in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		13B07F8E1A680F5B00A75B9A /* Resources */ = {
+		F04170E328C0B6AC009362E9 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F08065ED28BDF465006CDDE6 /* Ionicons.ttf in Resources */,
-				F08065EF28BDF47B006CDDE6 /* Poppins-Bold.ttf in Resources */,
-				81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */,
-				13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */,
+				F04170E728C0BA1C009362E9 /* Poppins-Bold.ttf in Resources */,
+				F04170E428C0B6B3009362E9 /* Poppins-Regular.ttf in Resources */,
+				F04170E528C0B6B3009362E9 /* Ionicons.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

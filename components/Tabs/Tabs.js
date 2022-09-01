@@ -1,9 +1,7 @@
 import React from 'react';
 import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
-// import {NavigationContainer} from '@react-navigation/native';
-import {Text, TouchableOpacity, View} from 'react-native';
+import {Text, View} from 'react-native';
 import Icon from 'react-native-vector-icons/Ionicons';
-// import HomeScreen from '../Home/Home';
 
 function BookmarkScreen() {
   return (
@@ -27,7 +25,7 @@ function TimeScreen() {
   );
 }
 const Tab = createBottomTabNavigator();
-
+Icon.loadFont();
 export default function MyTabs({navigation}) {
   return (
     <Tab.Navigator
@@ -47,6 +45,16 @@ export default function MyTabs({navigation}) {
           justifyContent: 'center',
         },
       }}>
+      <Tab.Screen
+        name="Home"
+        component={BookmarkScreen}
+        options={{
+          tabBarLabel: 'Bookmark',
+          tabBarIcon: () => (
+            <Icon name="ios-home-sharp" size={27} color="#CDEEFB" />
+          ),
+        }}
+      />
       <Tab.Screen
         name="Bookmark"
         component={BookmarkScreen}

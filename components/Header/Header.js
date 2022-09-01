@@ -13,6 +13,8 @@ import background from '../../img/background.png';
 import videoTitle from '../../img/videoTitle.png';
 import userIcon from '../../img/userIcon.png';
 
+Icon.loadFont();
+
 export default function Header() {
   return (
     <View style={styles.container}>
@@ -81,8 +83,7 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
   },
   subText: {
-    // fontWeight: 'bold',
-    fontFamily: 'Poppins-Bold',
+    fontFamily: 'Poppins-Regular',
     fontSize: 30,
     fontWeight: '800',
     lineHeight: 45,

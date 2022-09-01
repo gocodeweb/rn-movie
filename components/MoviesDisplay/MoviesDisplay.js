@@ -4,7 +4,7 @@ import {Text, View, StyleSheet, ScrollView} from 'react-native';
 import Icon from 'react-native-vector-icons/Ionicons';
 import Movie from '../Movie/Movie';
 import {movies} from '../../data';
-
+Icon.loadFont();
 export default function MoviesDisplay({navigation}) {
   return (
     <View style={styles.container}>
@@ -84,7 +84,7 @@ const styles = StyleSheet.create({
   },
 
   subText: {
-    fontFamily: 'Poppins-Bold',
+    fontFamily: 'Poppins-Regular',
     fontSize: 20,
     fontWeight: '800',
     lineHeight: 45,
