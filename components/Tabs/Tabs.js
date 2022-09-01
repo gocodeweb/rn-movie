@@ -4,25 +4,13 @@ import {Text, View} from 'react-native';
 import Icon from 'react-native-vector-icons/Ionicons';
 
 function BookmarkScreen() {
-  return (
-    <View style={{flex: 1, justifyContent: 'center', alignItems: 'center'}}>
-      <Text>Bookmark!</Text>
-    </View>
-  );
+  return <Text>Bookmark!</Text>;
 }
 function ActivityScreen() {
-  return (
-    <View style={{flex: 1, justifyContent: 'center', alignItems: 'center'}}>
-      <Text>Bookmark!</Text>
-    </View>
-  );
+  return <Text>Bookmark!</Text>;
 }
 function TimeScreen() {
-  return (
-    <View style={{flex: 1, justifyContent: 'center', alignItems: 'center'}}>
-      <Text>Bookmark!</Text>
-    </View>
-  );
+  return <Text>Bookmark!</Text>;
 }
 const Tab = createBottomTabNavigator();
 Icon.loadFont();

@@ -16,11 +16,7 @@ export default function Movie({
       <TouchableOpacity
         title="Details"
         onPress={() => navigation.push('Details', {id, data})}>
-        <Image
-          source={{uri: source}}
-          resizeMode="cover"
-          style={{width: 120, height: 180, borderRadius: 10}}
-        />
+        <Image source={{uri: source}} resizeMode="cover" style={styles.image} />
       </TouchableOpacity>
       <View style={styles.subText}>
         <Rating
@@ -33,7 +29,7 @@ export default function Movie({
           startingValue={rating}
           imageSize={13}
           showRating={false}
-          style={{paddingVertical: 10}}
+          style={styles.rating}
         />
         <Text style={styles.producer}>{producer}</Text>
       </View>
@@ -55,5 +51,13 @@ const styles = StyleSheet.create({
     width: '100%',
     justifyContent: 'space-between',
     alignItems: 'center',
+  },
+  rating: {
+    paddingVertical: 10,
+  },
+  image: {
+    width: 120,
+    height: 180,
+    borderRadius: 10,
   },
 });
